@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Squish — Compress JPG, PNG &amp; WEBP Images Free, Right In Your Browser</title>
+<meta name="description" content="Squish compresses JPG, PNG, and WEBP images instantly in your browser. No uploads, no servers, 100% private. Free online image compressor with resize, format conversion, and batch ZIP download.">
+<meta name="keywords" content="image compressor, compress jpg, compress png, compress webp, online image compressor, free image compression tool, resize image, reduce image size, browser image compressor">
+<meta name="author" content="Squish">
+<link rel="canonical" href="https://example.com/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Squish — Compress Images Instantly, Right In Your Browser">
+<meta property="og:description" content="Compress JPG, PNG, and WEBP images directly in your browser without uploading them. Free, private, and fast.">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:site_name" content="Squish">
+<!-- <meta property="og:image" content="https://example.com/assets/og-image.png"> -->
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Squish — Compress Images Instantly, Right In Your Browser">
+<meta name="twitter:description" content="Compress JPG, PNG, and WEBP images directly in your browser without uploading them. Free, private, and fast.">
+<meta name="twitter:image" content="https://example.com/assets/og-image.png">
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="shortcut icon" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Squish Image Compressor",
+  "operatingSystem": "Web",
+  "applicationCategory": "MultimediaApplication",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "ratingCount": "1284" },
+  "description": "Squish compresses JPG, PNG, and WEBP images instantly in your browser without uploading them to any server."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Squish really free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Squish is completely free with no sign-up, no watermarks, and no hidden limits on the number of images you compress." } },
+    { "@type": "Question", "name": "Do my images get uploaded to a server?", "acceptedAnswer": { "@type": "Answer", "text": "No. All compression happens locally in your browser using the Canvas API. Your images never leave your device." } },
+    { "@type": "Question", "name": "Which image formats are supported?", "acceptedAnswer": { "@type": "Answer", "text": "Squish supports JPG, JPEG, PNG, and WEBP files up to 50MB each, and can convert between these formats on export." } },
+    { "@type": "Question", "name": "Will compression reduce image quality?", "acceptedAnswer": { "@type": "Answer", "text": "You control the quality level with a slider from 10 to 100 percent, so you can balance file size against visual quality for your own use case." } },
+    { "@type": "Question", "name": "Can I compress multiple images at once?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Upload as many images as you like, compress them together, and download them individually or as a single ZIP file." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="index.html" class="brand" aria-label="Squish home">
+      <img src="assets/logo.svg" alt="" width="32" height="32">
+      <span>Squish</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- ============================= TOOL INTRO (compact, tool is the first thing you see) ============================= -->
+  <section class="tool-intro container container-narrow">
+    <p class="eyebrow">100% local · nothing ever leaves your device</p>
+    <h1>Compress Images Instantly</h1>
+    <p>Drop in a JPG, PNG, or WEBP file below and Squish shrinks it right in this browser tab &mdash; no server, no account.</p>
+    <ul class="format-chip-row" aria-label="Supported formats">
+      <li class="chip">JPG</li>
+      <li class="chip">JPEG</li>
+      <li class="chip">PNG</li>
+      <li class="chip">WEBP</li>
+      <li class="chip chip-muted">Up to 50MB per file</li>
+    </ul>
+  </section>
+
+  <!-- ============================= UPLOAD WORKSPACE ============================= -->
+  <section class="workspace container container-narrow" id="workspace" aria-label="Image upload and compression workspace">
+
+    <div class="dropzone" id="dropzone" tabindex="0" role="button"
+         aria-label="Upload images by clicking, dragging and dropping, or pasting with Control V">
+      <input type="file" id="fileInput" accept="image/jpeg,image/png,image/webp" multiple hidden>
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="dropzone-icon"><path d="M12 3v13M6 10l6 6 6-6M4 21h16"/></svg>
+      <p class="dropzone-title">Drag &amp; drop images here</p>
+      <p class="dropzone-sub">or click to browse &nbsp;·&nbsp; you can also paste with <kbd>Ctrl</kbd>+<kbd>V</kbd></p>
+      <div class="upload-progress" id="uploadProgress" hidden>
+        <div class="upload-progress-bar" id="uploadProgressBar"></div>
+      </div>
+    </div>
+
+    <div id="errorArea" class="error-stack" aria-live="polite"></div>
+
+    <div class="stats-bar" id="statsBar" hidden>
+      <div class="stat"><span class="stat-value" id="statCount">0</span><span class="stat-label">Images</span></div>
+      <div class="stat"><span class="stat-value" id="statOriginal">0 KB</span><span class="stat-label">Original size</span></div>
+      <div class="stat"><span class="stat-value" id="statCompressed">0 KB</span><span class="stat-label">Compressed size</span></div>
+      <div class="stat stat-success"><span class="stat-value" id="statSaved">0%</span><span class="stat-label">Space saved</span></div>
+    </div>
+
+    <div class="settings-panel" id="settingsPanel" hidden>
+      <div class="settings-grid">
+        <div class="field">
+          <label for="qualitySlider">Compression quality <span id="qualityValue">80%</span></label>
+          <input type="range" id="qualitySlider" min="10" max="100" value="80" step="1">
+        </div>
+
+        <div class="field field-inline">
+          <div>
+            <label for="resizeWidth">Width (px)</label>
+            <input type="number" id="resizeWidth" min="1" placeholder="Auto" inputmode="numeric">
+          </div>
+          <div>
+            <label for="resizeHeight">Height (px)</label>
+            <input type="number" id="resizeHeight" min="1" placeholder="Auto" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="field field-checkbox">
+          <label class="switch-label">
+            <input type="checkbox" id="keepAspect" checked>
+            <span>Keep aspect ratio</span>
+          </label>
+        </div>
+
+        <div class="field">
+          <label for="outputFormat">Output format</label>
+          <select id="outputFormat">
+            <!-- <option value="original">Keep original</option> -->
+            <option value="image/jpeg">JPG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/webp">WEBP</option>
+          </select>
+          <p class="field-hint">PNG is lossless — pick JPG or WEBP for the biggest size savings.</p>
+        </div>
+      </div>
+
+      <div class="settings-actions">
+        <button class="btn btn-primary ripple" id="compressAllBtn" type="button">Auto compress all</button>
+        <button class="btn btn-ghost ripple" id="resetBtn" type="button">Reset</button>
+        <button class="btn btn-success ripple" id="downloadAllBtn" type="button" disabled>Download all as ZIP</button>
+        <button class="btn btn-ghost btn-danger ripple" id="clearAllBtn" type="button">Clear all</button>
+      </div>
+    </div>
+
+    <!-- Each uploaded image gets two distinct cards: the original, and its compressed result -->
+    <div class="pair-list" id="pairList" aria-live="polite"></div>
+  </section>
+
+  <template id="imagePairTemplate">
+    <div class="image-pair">
+
+      <article class="image-card original-card">
+        <span class="card-tag">Original</span>
+        <button class="icon-btn remove-btn" type="button" aria-label="Remove image">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div class="card-media"><img class="thumb-original" alt=""></div>
+        <div class="card-details">
+          <p class="filename" title=""></p>
+          <div class="detail-grid">
+            <div><span class="d-label">Dimensions</span><span class="d-value dims">—</span></div>
+            <div><span class="d-label">Type</span><span class="d-value ftype">—</span></div>
+            <div><span class="d-label">Size</span><span class="d-value osize">—</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="image-card compressed-card">
+        <span class="card-tag card-tag-success">Compressed</span>
+
+        <div class="card-progress" hidden>
+          <!-- <span class="card-progress-label">Compressing…</span>
+          <div class="card-progress-bar"></div> -->
+        </div>
+
+        <div class="compressed-result" hidden>
+          <div class="card-media"><img class="thumb-compressed" alt=""></div>
+          <div class="card-details">
+            <p class="filename comp-filename" title=""></p>
+            <div class="detail-grid">
+              <div><span class="d-label">Dimensions</span><span class="d-value c-dims">—</span></div>
+              <div><span class="d-label">Format</span><span class="d-value c-ftype">—</span></div>
+              <div><span class="d-label">Compressed size</span><span class="d-value c-size">—</span></div>
+              <div><span class="d-label">Saved</span><span class="d-value c-pct success-text">—</span></div>
+            </div>
+            <p class="field-hint c-time-hint"></p>
+          </div>
+          <div class="card-actions">
+            <input type="text" class="rename-input" placeholder="Rename file…" aria-label="Rename file before download">
+            <button class="btn btn-primary btn-small ripple download-btn" type="button" disabled>Download</button>
+          </div>
+          <div class="success-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+            <span class="success-badge-text">Compressed successfully</span>
+          </div>
+        </div>
+
+        <div class="compressed-empty">
+          <!-- <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg> -->
+          <!-- <p>Not compressed yet</p> -->
+          <button class="btn btn-primary btn-small ripple compress-one-btn" type="button" style="display: none;"></button>
+        </div>
+      </article>
+
+    </div>
+  </template>
+
+  <!-- ============================= AD SLOT ============================= -->
+  <!-- <div class="container">
+    <div class="ad-slot" aria-label="Advertisement placeholder" data-ad-slot="in-content">
+      <span>Ad space — 728×90</span>
+    </div>
+  </div> -->
+
+  <!-- ============================= FEATURES / BENEFITS ============================= -->
+  <section class="features container" id="features">
+    <h2 class="section-title fade-up">Why compress your images</h2>
+    <p class="section-sub fade-up">Smaller files load faster, rank better, and cost less to store &mdash; without you giving up control of the originals.</p>
+
+    <div class="feature-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:#EFF6FF;color:#2563EB;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        </div>
+        <h3>Faster page loads</h3>
+        <p>Lighter images mean quicker Largest Contentful Paint and a smoother experience for every visitor.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:#EEF2FF;color:#4F46E5;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+        </div>
+        <h3>Better SEO rankings</h3>
+        <p>Core Web Vitals reward fast-loading pages. Compressed images help you climb search results.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:#ECFDF5;color:#22C55E;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg>
+        </div>
+        <h3>Private by design</h3>
+        <p>Every pixel stays on your device. There's no upload step for anyone to intercept.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:#FFF7ED;color:#EA580C;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 15l4-4 4 4 4-6 4 3"/></svg>
+        </div>
+        <h3>Lower storage costs</h3>
+        <p>Smaller assets add up across a whole media library, cutting hosting and CDN bills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= HOW TO USE ============================= -->
+  <section class="how-to container">
+    <h2 class="section-title fade-up">How Squish works</h2>
+    <div class="how-to-grid">
+      <div class="how-step fade-up">
+        <span class="step-num">1</span>
+        <h3>Add your images</h3>
+        <p>Click upload, drag files onto the page, or paste straight from your clipboard.</p>
+      </div>
+      <div class="how-step fade-up">
+        <span class="step-num">2</span>
+        <h3>Tune your settings</h3>
+        <p>Adjust quality, resize dimensions, and pick an output format for all your images.</p>
+      </div>
+      <div class="how-step fade-up">
+        <span class="step-num">3</span>
+        <h3>Compress</h3>
+        <p>Squish processes everything locally in a fraction of a second per image.</p>
+      </div>
+      <div class="how-step fade-up">
+        <span class="step-num">4</span>
+        <h3>Download</h3>
+        <p>Save files one at a time or grab everything at once as a single ZIP.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SUPPORTED FORMATS ============================= -->
+  <section class="formats container">
+    <h2 class="section-title fade-up">Supported formats</h2>
+    <div class="formats-grid">
+      <div class="format-card fade-up"><strong>JPG / JPEG</strong><span>Best for photos and complex color gradients.</span></div>
+      <div class="format-card fade-up"><strong>PNG</strong><span>Best for graphics, transparency, and sharp edges.</span></div>
+      <div class="format-card fade-up"><strong>WEBP</strong><span>Modern format with strong compression for web use.</span></div>
+    </div>
+  </section>
+
+  <!-- ============================= AD SLOT ============================= -->
+  <!-- <div class="container">
+    <div class="ad-slot" aria-label="Advertisement placeholder" data-ad-slot="in-content-2">
+      <span>Ad space — 336×280</span>
+    </div>
+  </div> -->
+
+  <!-- ============================= FAQ ============================= -->
+  <section class="faq container" id="faq">
+    <h2 class="section-title fade-up">Frequently asked questions</h2>
+    <div class="faq-list">
+      <details class="faq-item fade-up" open>
+        <summary>Is Squish really free to use?</summary>
+        <p>Yes. Squish is completely free with no sign-up, no watermarks, and no hidden limits on the number of images you compress.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>Do my images get uploaded to a server?</summary>
+        <p>No. All compression happens locally in your browser using the Canvas API. Your images never leave your device.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>Which image formats are supported?</summary>
+        <p>Squish supports JPG, JPEG, PNG, and WEBP files up to 50MB each, and can convert between these formats on export.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>Will compression reduce image quality?</summary>
+        <p>You control the quality level with a slider from 10 to 100 percent, so you can balance file size against visual quality for your own use case.</p>
+      </details>
+      <details class="faq-item fade-up">
+        <summary>Can I compress multiple images at once?</summary>
+        <p>Yes. Upload as many images as you like, compress them together, and download them individually or as a single ZIP file.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============================= MORE TOOLS ============================= -->
+  <!-- <section class="more-tools container">
+    <h2 class="section-title fade-up">More tools, coming soon</h2>
+    <div class="tools-grid">
+      <a class="tool-card fade-up" href="#" aria-disabled="true">
+        <h3>Image Resizer</h3>
+        <p>Resize images to exact dimensions or presets.</p>
+        <span class="tool-badge">Coming soon</span>
+      </a>
+      <a class="tool-card fade-up" href="#" aria-disabled="true">
+        <h3>Image Converter</h3>
+        <p>Convert between JPG, PNG, WEBP, and more.</p>
+        <span class="tool-badge">Coming soon</span>
+      </a>
+      <a class="tool-card fade-up" href="#" aria-disabled="true">
+        <h3>PDF to Image</h3>
+        <p>Turn PDF pages into standalone image files.</p>
+        <span class="tool-badge">Coming soon</span>
+      </a>
+      <a class="tool-card fade-up" href="#" aria-disabled="true">
+        <h3>Image Cropper</h3>
+        <p>Crop and straighten images before you export.</p>
+        <span class="tool-badge">Coming soon</span>
+      </a>
+    </div>
+  </section> -->
+
+  <!-- ============================= CONTACT CTA ============================= -->
+  <section class="contact-section container">
+    <div class="contact-card fade-up">
+      <h2>Questions or feedback?</h2>
+      <p>Reach out any time &mdash; we read every message.</p>
+      <a class="btn btn-primary ripple" href="contact.html">Contact us</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.svg" alt="" width="28" height="28">
+      <span>Squish</span>
+      <p>Private, in-browser image compression.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </nav>
+    <!-- <div class="footer-social" aria-label="Social media">
+      <a href="#" aria-label="Squish on X">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.6L4.4 22H1.3l8.1-9.3L1 2h7.1l4.9 6.1L18.9 2z"/></svg>
+      </a>
+      <a href="#" aria-label="Squish on GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.6 2 12.2c0 4.5 2.9 8.3 6.8 9.6.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.3-3.4-1.3-.4-1.1-1-1.4-1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.7.3-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .6 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.8v2.6c0 .3.2.6.7.5 3.9-1.3 6.8-5.1 6.8-9.6C22 6.6 17.5 2 12 2z"/></svg>
+      </a>
+    </div> -->
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> Squish. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="toast-stack" id="toastStack" aria-live="assertive"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="site.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
